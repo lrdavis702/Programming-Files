@@ -1,0 +1,3 @@
+pluto 10 10
+goofey 25 12.8
+belle 20 25.5
