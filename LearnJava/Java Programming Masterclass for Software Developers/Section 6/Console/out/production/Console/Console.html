@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<textarea id="msg"></textarea> <button id="send">Add Message</button>
+<div id="sent" style="font-style: italic">
+    <div>Sent messages appear here.</div>
+
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<script>
+        $(document).ready(function () {
+            $("#send").click(function () {
+                var msg = $("#msg").val();
+
+console.log(msg);
+
+var sent = $("#sent").html()
+sent += "<div>" + msg + "</div>”)
+$("#sent").html(sent)
+
+var div = $("<div></div>”).text(msg)
+$("#sent").append(div)
+
+
+            });
+        });
+
+
+    </script>
+</body>
+</html>
