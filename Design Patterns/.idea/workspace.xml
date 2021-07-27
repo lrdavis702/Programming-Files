@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7b1c2d4a-9bd4-42c7-9d5e-00ff1f277ed8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DNDCharacterFactory/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DNDCharacterFactory/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DNDCharacterFactory/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DNDCharacterFactory/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DNDCharacterFactory/DNDCharacterFactory.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseLanguage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Dragonborn/BlackDragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Dragonborn/BlueDragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Dragonborn/BrassDragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Dragonborn/BronzeDragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Dragonborn/CopperDragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Dragonborn/GoldDragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Dragonborn/GreenDragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Dragonborn/RedDragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Dragonborn/SilverDragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Dragonborn/WhiteDragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Dwarf/HillDwarf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Dwarf/MountainDwarf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Elf/DarkElf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Elf/HighElf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Elf/WoodElf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Gnome/ForestGnome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Gnome/RockGnome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Halfling/LightfootHalfling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Halfling/StoutHalfling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Human/CalishiteHuman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Human/ChondathanHuman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Human/DamaranHuman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Human/IlluskanHuman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Human/MulanHuman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Human/RashemiHuman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Human/ShouHuman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Human/TethyrianHuman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/src/DesignPatterns/ChooseRace/Human/TuramiHuman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/PizzaStoryFactory/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/PizzaStoryFactory/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/PizzaStoryFactory/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/PizzaStoryFactory/src/DesignPatterns/ChicagoPizzaStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/PizzaStoryFactory/src/DesignPatterns/ChicagoStyleCheesePizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/PizzaStoryFactory/src/DesignPatterns/ChicagoStyleClamPizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/PizzaStoryFactory/src/DesignPatterns/ChicagoStylePepperoniPizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/PizzaStoryFactory/src/DesignPatterns/ChicagoStyleVeggiePizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/PizzaStoryFactory/src/DesignPatterns/NYPizzaStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/PizzaStoryFactory/src/DesignPatterns/NYStyleCheesePizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/PizzaStoryFactory/src/DesignPatterns/NYStyleClamPizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/PizzaStoryFactory/src/DesignPatterns/NYStylePepperoniPizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/PizzaStoryFactory/src/DesignPatterns/NYStyleVeggiePizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/PizzaStoryFactory/src/DesignPatterns/Pizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/PizzaStoryFactory/src/DesignPatterns/PizzaStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/TermProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Class/ChooseClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Description/DescribeCharacter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Equipment/ChooseEquipment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/ChooseRace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Dragonborn/BlackDragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Dragonborn/BlueDragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Dragonborn/BrassDragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Dragonborn/BronzeDragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Dragonborn/CopperDragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Dragonborn/DragonbornRace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Dragonborn/GoldDragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Dragonborn/GreenDragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Dragonborn/RedDragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Dragonborn/SilverDragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Dragonborn/WhiteDragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Dwarf/DwarfRace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Dwarf/HillDwarf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Dwarf/MountainDwarf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Elf/DarkElf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Elf/ElfRace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Elf/HighElf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Elf/WoodElf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Gnome/ForestGnome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Gnome/GnomeRace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Gnome/RockGnome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/HalfElf/HalfElfRace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/HalfOrc/HalfOrcRace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Halfling/HalflingRace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Halfling/LightfootHalfling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Halfling/StoutHalfling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Human/CalishiteHuman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Human/ChondathanHuman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Human/DamaranHuman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Human/HumanRace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Human/IlluskanHuman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Human/MulanHuman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Human/RashemiHuman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Human/ShouHuman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Human/TethyrianHuman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Human/TuramiHuman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Race.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/RaceFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Race/Tiefling/TieflingRace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/src/DesignPatterns/Scores/DetermineAbilityScores.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java Design Pattern Course (Udemy)/Icon&#10;" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1vgwStvYpG3S24WOPVkoJDV7b6w" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7b1c2d4a-9bd4-42c7-9d5e-00ff1f277ed8" name="Default Changelist" comment="" />
+      <created>1626997042336</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1626997042336</updated>
+    </task>
+    <servers />
+  </component>
+</project>

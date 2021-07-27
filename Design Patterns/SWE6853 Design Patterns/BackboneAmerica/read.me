@@ -1,0 +1,39 @@
+/*
+Developed for SWE6853 Design Patterns (Summer 2021)
+@author Latasha Renee Davis Townsend
+@version 1.0
+
+@description The Backbone America program is an application that allows the user
+to create a user account, order services, and register for a retreat.
+It uses design patterns in the Creational Category (factory, prototype,
+singleton, and builder).
+
+UML Class Diagrams in folder BackboneAmerica/UML Class Design Patterns
+
+- factory: Used for the overall structure of the services available to users.
+Services available to users are Business Planning, Coaching, Employee Training,
+and Recorded Classes.
+@Pros: Factory pattern allowed for loose coupling, while still allowing for
+inheritance. Each service class can be modified individually without having to
+make alterations to the other classes.
+@Cons: Required quite a few classes to implement. For example, each category of
+service required a class and each service required its own class. Additionally,
+classes are needed for the factory and construct.
+
+- prototype: Used for the creation of user records. Different types user
+records includes Guest, Prospect, and Client. Each type of record is based
+upon on prototype, which includes standard fields.
+@Pros Allows me to cone the prototype with standard fields for the users.
+New users can be created as needed.
+@Cons
+
+- singleton: Used in the group coaching services for creating the initial
+coaching sessions.
+@Pros Creates just one instance of the class. Therefore, users  who want to
+order the group session all register for the first upcoming class.
+@Cons
+
+- builder
+@Pros
+@Cons
+*/

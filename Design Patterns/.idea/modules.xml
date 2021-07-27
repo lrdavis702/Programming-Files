@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SWE6853 Design Patterns/DNDCharacterFactory/DNDCharacterFactory.iml" filepath="$PROJECT_DIR$/SWE6853 Design Patterns/DNDCharacterFactory/DNDCharacterFactory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SWE6853 Design Patterns/DNDTermProject/DNDTermProject.iml" filepath="$PROJECT_DIR$/SWE6853 Design Patterns/DNDTermProject/DNDTermProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Design Patterns.iml" filepath="$PROJECT_DIR$/.idea/Design Patterns.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/DnDCharacterCreation.iml" filepath="$PROJECT_DIR$/SWE6853 Design Patterns/DnDCharacterCreation/DnDCharacterCreation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SWE6853 Design Patterns/Factory Pattern/Factory Pattern.iml" filepath="$PROJECT_DIR$/SWE6853 Design Patterns/Factory Pattern/Factory Pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SWE6853 Design Patterns/PizzaStoryFactory/PizzaStoryFactory.iml" filepath="$PROJECT_DIR$/SWE6853 Design Patterns/PizzaStoryFactory/PizzaStoryFactory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/TermProject.iml" filepath="$PROJECT_DIR$/SWE6853 Design Patterns/TermProject/TermProject.iml" />
+    </modules>
+  </component>
+</project>
