@@ -1,3 +1,6 @@
+// Concrete class that extends BreakoutItem (overwrites values
+//in variables
+
 package DesignPatterns.AnnualRetreat.Breakout;
 
 public class GoalSetting extends BreakoutItem {

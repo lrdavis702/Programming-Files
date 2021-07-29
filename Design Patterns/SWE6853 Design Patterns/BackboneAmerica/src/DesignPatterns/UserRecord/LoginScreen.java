@@ -1,3 +1,4 @@
+// Login screen
 package DesignPatterns.UserRecord;
 
 import DesignPatterns.PrintMenu;
@@ -10,6 +11,7 @@ public class LoginScreen {
     static String userName;
     static String password;
 
+    // first screen displayed for users
     public static void displayScreen() {
 
         String[] welcomeArray = new String[]{"Login", "Create a New Account", "Account information", "Delete Account"};
@@ -25,6 +27,7 @@ public class LoginScreen {
         } else if (userChoice == '4') deleteAccount();
     }
 
+    // allows users to log into system if credentials match
     private static void login() {
         System.out.println("Enter your user name: ");
         userName = input.nextLine();
@@ -36,6 +39,7 @@ public class LoginScreen {
         validateCredentials(userName, password);
     }
 
+    // allows users to create new account
     private static void createAccount() {
         String response;
         UserCache userCache = new UserCache();
@@ -77,6 +81,7 @@ public class LoginScreen {
         writeUserfile(userRecord, p.getUserName());
     }
 
+    // allows users to see account information
     private static void displayAccount() {
         login();
 
@@ -96,6 +101,8 @@ public class LoginScreen {
         }
     }
 
+
+    // allows users to delete account
     private static void deleteAccount() {
 
         //toString();
@@ -119,6 +126,7 @@ public class LoginScreen {
         displayScreen();
     }
 
+    // checks for user file and creates file if not there
     private static void createUserFile(String response) {
         try {
             File myObj = new File(response + ".rec");
@@ -133,6 +141,7 @@ public class LoginScreen {
         }
     }
 
+    // writes user information to file (create account)
     private static void writeUserfile(String userRecord, String userName) {
         try {
             FileWriter myWriter = new FileWriter(userName + ".rec");
@@ -145,6 +154,7 @@ public class LoginScreen {
         }
     }
 
+    // validates user credentials at login
     private static void validateCredentials(String userName, String password) {
         try {
             File userFile = new File(userName + ".rec");

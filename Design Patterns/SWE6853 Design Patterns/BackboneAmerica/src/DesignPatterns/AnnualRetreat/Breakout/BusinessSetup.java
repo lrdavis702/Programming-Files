@@ -1,6 +1,6 @@
+// Concrete class that extends BreakoutItem (overwrites values
+//in variables
 package DesignPatterns.AnnualRetreat.Breakout;
-
-import DesignPatterns.AnnualRetreat.Item;
 
 public class BusinessSetup extends BreakoutItem {
     @Override
@@ -10,7 +10,7 @@ public class BusinessSetup extends BreakoutItem {
 
     @Override
     public String name() {
-        return "Business Setting";
+        return "Business Setup";
     }
 
     @Override

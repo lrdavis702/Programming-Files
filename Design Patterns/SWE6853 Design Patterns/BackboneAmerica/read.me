@@ -19,21 +19,300 @@ make alterations to the other classes.
 @Cons: Required quite a few classes to implement. For example, each category of
 service required a class and each service required its own class. Additionally,
 classes are needed for the factory and construct.
+CODE: // BBA = BackboneAmerica. Abstract Service class for services
+
+      package DesignPatterns.Services;
+
+      import java.util.ArrayList;
+
+      public abstract class BBAService {
+          String name;
+          String description;
+          int sessions;
+          int price;
+          ArrayList addons = new ArrayList();
+
+
+          // visual steps for ordering services
+          void prepare() {
+              System.out.println("Preparing " + name);
+              System.out.println("\nDescription> \n" + description);
+              System.out.println("*Includes> " + sessions + " sessions");
+              System.out.print("**Free Bonuses> ");
+              // adds free items to service package
+              for (int i = 0; i < addons.size(); i++) {
+                  System.out.println(" " + addons.get(i));
+              }
+          }
+
+          // prints out cost of service
+          void calculating() {
+              System.out.println("Calculating your order");
+              System.out.println("Price: $" + price);
+          }
+
+          void submitting() {
+              System.out.println("Submitting your order");
+          }
+
+          void emailing() {
+              System.out.println("Check your email for order details.");
+          }
+
+          public String getName() {
+              return name;
+          }
+      }
 
 - prototype: Used for the creation of user records. Different types user
 records includes Guest, Prospect, and Client. Each type of record is based
 upon on prototype, which includes standard fields.
-@Pros Allows me to cone the prototype with standard fields for the users.
-New users can be created as needed.
-@Cons
+@Pros Allows cloning of the prototype with standard fields for the users
+at runtime. New users can be created as needed with varying structures
+@Cons Cloning users can be complicated.
+CODE: // Abstract UserPrototype class implements Cloneable Interface
+      package DesignPatterns.UserRecord;
+
+      public abstract class UserPrototype implements Cloneable {
+          private String type; // type of user (client/guest)
+          private String fName; // first name
+          private String lName; // last name
+          private String userName; // unique user name
+          private String email; // user email
+          private String password; // user passsword
+
+          public String getType() {
+              return type;
+          }
+
+          public void setType(String type) {
+              this.type = type;
+          }
+
+          public String getfName() {
+              return fName;
+          }
+
+          public void setfName(String fName) {
+              this.fName = fName;
+          }
+
+          public String getlName() {
+              return lName;
+          }
+
+          public void setlName(String lName) {
+              this.lName = lName;
+          }
+
+          public String getUserName() {
+              return userName;
+          }
+
+          public void setUserName(String userName) {
+              this.userName = userName;
+          }
+
+          public String getEmail() {
+              return email;
+          }
+
+          public void setEmail(String email) {
+              this.email = email;
+          }
+
+          public String getPassword() {
+              return password;
+          }
+
+          public void setPassword(String password) {
+              this.password = password;
+          }
+
+          @Override
+          protected Object clone() throws CloneNotSupportedException {
+              return super.clone();
+          }
+      }
 
 - singleton: Used in the group coaching services for creating the initial
 coaching sessions.
 @Pros Creates just one instance of the class. Therefore, users  who want to
-order the group session all register for the first upcoming class.
-@Cons
+order the group session all register for the first upcoming class, which is
+defined as the first Saturdays.
+@Cons Has the potential to significantly decrease performance.
+CODE:
+// Creates Singleton Class for Group Coaching
+package DesignPatterns.Services.Coaching.Group;
 
-- builder
-@Pros
-@Cons
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class SingletonGroup {
+    Scanner input = new Scanner(System.in);
+
+    // creates an object of SingletonGroup
+    private static SingletonGroup instance = new SingletonGroup();
+
+    // constructor to prevent instantiation
+    private SingletonGroup() {
+    }
+
+    // gets the object
+    public static SingletonGroup getInstance() {
+        return instance;
+    }
+
+    public boolean groupRegistration(String item) {
+        String answer;
+        String pattern = "MMMM dd, yyyy";
+
+        SimpleDateFormat sdf = new SimpleDateFormat(pattern, new Locale("en", "US"));
+
+        // gets next date and formats it.
+        String registrationDate = sdf.format(getMonthWeek());
+
+
+        System.out.println("The next group session for Your Roadmap to Success is scheduled for " + registrationDate +
+                " at 8:00 am");
+
+        // Verifies users still wants to attend next date. If not, sends back to main menu
+        do {
+            System.out.println("Are you still interested in attending? (Y/N)");
+            answer = input.nextLine();
+
+            answer.toLowerCase();
+
+            if (answer.charAt(0) == 'y') return true;
+            else if (answer.charAt(0) == 'n') return false;
+            else System.out.println("Please answer Y or N");
+        } while (answer.charAt(0) != 'y' || answer.charAt(0) != 'n');
+        return false;
+    }
+
+    // gets next group coaching session... first Saturday of month.
+    public static Date getMonthWeek() {
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.MONTH, 1);
+        cal.set(Calendar.DAY_OF_MONTH, 1);
+        cal.get((Calendar.DAY_OF_WEEK) - 1);
+        int i = 1;
+        while (cal.get(Calendar.DAY_OF_WEEK) != Calendar.SATURDAY) {
+            cal.set(Calendar.DAY_OF_MONTH, i++);
+        }
+        Date firstSaturday = cal.getTime();
+        String dtStr = new SimpleDateFormat("yyyy-MM-dd").format(firstSaturday);
+        String d = dtStr + " 20:00:00";
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = null;
+
+        try {
+            date = sdf.parse(d);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return date;
+    }
+
+    public void showInvoice(){
+        System.out.println(instance);
+    }
+}
+
+- builder: Used in the annual retreat for customizing options for the user.
+@Pros Allows flexibility when creating objects by providing a "menu" of
+choices.
+@Cons Like the factory pattern, it can be very code intensive. Each category
+reuires it's own class as well as each item within a category.
+CODE:
+// Builder class for creating the Retreat
+package DesignPatterns.AnnualRetreat;
+
+import DesignPatterns.AnnualRetreat.Breakout.BusinessSetup;
+import DesignPatterns.AnnualRetreat.Food.LunchItem;
+import DesignPatterns.PrintMenu;
+import DesignPatterns.AnnualRetreat.Breakout.GoalSetting;
+import DesignPatterns.AnnualRetreat.Breakout.Networking;
+import DesignPatterns.AnnualRetreat.Breakout.Projections;
+import DesignPatterns.AnnualRetreat.Entertainment.AmusementPark;
+import DesignPatterns.AnnualRetreat.Entertainment.Museum;
+import DesignPatterns.AnnualRetreat.Entertainment.NatureWalk;
+import DesignPatterns.AnnualRetreat.Food.GlutenFree;
+import DesignPatterns.AnnualRetreat.Food.Regular;
+import DesignPatterns.AnnualRetreat.Food.Vegan;
+
+public class RetreatBuilder {
+    public Retreat prepareRetreat() {
+        System.out.println("***Build Your Retreat***");
+
+        Retreat retreat = new Retreat();
+
+        // adds options to the retreat
+        retreat.addItem(selectSession());
+        retreat.addItem(selectMeal());
+        retreat.addItem(selectEntertainment());
+
+        return retreat;
+    }
+
+    // allows the user to select entertainment from menu
+    private Item selectEntertainment() {
+        String[] entertainmentArray = new String[]{"Amusement Park", "Museum", "Nature Walk"};
+        String entertainmentTitle = "City Tour";
+
+        char item;
+
+        System.out.println("Choose an entertainment option");
+
+        // gets selection from user
+        item = PrintMenu.makeSelection(entertainmentArray, entertainmentTitle);
+
+        if (item == '1') return new AmusementPark();
+        else if (item == '2') return new Museum();
+        else if (item == '3') return new NatureWalk();
+        else return null;
+    }
+
+    // allows the user to select lunch option from menu
+    private Item selectMeal() {
+        String[] lunchArray = new String[]{"Standard Meal", "Gluten-Free Meal", "Vegan Meal"};
+        String lunchTitle = "Lunch Menu";
+
+        char item;
+
+        System.out.println("Choose a lunch option");
+
+        // gets selection from user
+        item = PrintMenu.makeSelection(lunchArray, lunchTitle);
+
+        if (item == '1') return new Regular();
+        else if (item == '2') return new GlutenFree();
+        else if (item == '3') return new Vegan();
+        else return null;
+    }
+
+    // allows the user to select breakout session from menu
+    private Item selectSession() {
+        String[] sessionArray = new String[]{"Business Setup", "Goal Setting", "Networking",
+                "Financial Projections"};
+        String sessionTitle = "Breakout Session";
+
+        char item;
+
+        System.out.println("Select a Breakout Session");
+
+        // gets selection from user
+        item = PrintMenu.makeSelection(sessionArray, sessionTitle);
+
+        if (item == '1') return new BusinessSetup();
+        else if (item == '2') return new GoalSetting();
+        else if (item == '3') return new Networking();
+        else if (item == '4') return new Projections();
+        else return null;
+    }
+}
 */

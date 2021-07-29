@@ -1,3 +1,6 @@
+// Concrete class that extends TourItem (overwrites values
+//in variables)
+
 package DesignPatterns.AnnualRetreat.Entertainment;
 
 public class NatureWalk extends TourItem {
@@ -10,6 +13,7 @@ public class NatureWalk extends TourItem {
     public String name() {
         return "Nature Walk";
     }
+
     @Override
     public int sessions() {
         return 1;

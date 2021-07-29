@@ -1,3 +1,4 @@
+// Abstract UserPrototype class implements Cloneable Interface
 package DesignPatterns.UserRecord;
 
 public abstract class UserPrototype implements Cloneable {

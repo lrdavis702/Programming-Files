@@ -1,3 +1,5 @@
+// Concrete subclass for BBAServices
+
 package DesignPatterns.Services.Coaching;
 
 import DesignPatterns.Services.BBAService;

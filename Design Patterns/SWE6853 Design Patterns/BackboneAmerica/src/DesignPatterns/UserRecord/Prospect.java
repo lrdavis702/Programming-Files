@@ -1,3 +1,4 @@
+// Concrete class for Prospects, extends UserPrototype
 package DesignPatterns.UserRecord;
 
 public class Prospect extends UserPrototype {

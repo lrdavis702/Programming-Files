@@ -1,3 +1,5 @@
+// Concrete class that implement the planner interface
+
 package DesignPatterns.AnnualRetreat.Entertainment;
 
 import DesignPatterns.AnnualRetreat.Planner;
@@ -5,6 +7,6 @@ import DesignPatterns.AnnualRetreat.Planner;
 public class ExplorationType implements Planner {
     @Override
     public String plan(){
-        return "Local Exploration";
+        return "City Tour";
     }
 }

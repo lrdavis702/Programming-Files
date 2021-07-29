@@ -1,3 +1,6 @@
+// Concrete class that extends TourItem (overwrites values
+//in variables)
+
 package DesignPatterns.AnnualRetreat.Entertainment;
 
 public class AmusementPark extends TourItem {

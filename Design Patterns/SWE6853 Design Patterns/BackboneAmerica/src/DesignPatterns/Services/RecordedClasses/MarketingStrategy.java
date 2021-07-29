@@ -1,3 +1,5 @@
+// Concrete subclass for BBAServices
+
 package DesignPatterns.Services.RecordedClasses;
 
 import DesignPatterns.Services.BBAService;

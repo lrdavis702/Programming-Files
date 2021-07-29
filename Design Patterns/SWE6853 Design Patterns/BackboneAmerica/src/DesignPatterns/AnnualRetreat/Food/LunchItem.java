@@ -1,3 +1,6 @@
+// abstract class that implements the Item interface. Creates new
+// Planner type for the lunch and price
+
 package DesignPatterns.AnnualRetreat.Food;
 
 import DesignPatterns.AnnualRetreat.Item;

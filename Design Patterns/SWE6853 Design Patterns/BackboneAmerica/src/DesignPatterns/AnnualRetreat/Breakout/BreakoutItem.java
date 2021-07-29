@@ -1,3 +1,5 @@
+// abstract class that implements the Item interface. Creates new
+// Planner type for the breakout session and price
 package DesignPatterns.AnnualRetreat.Breakout;
 
 import DesignPatterns.AnnualRetreat.Item;

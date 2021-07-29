@@ -1,3 +1,6 @@
+// abstract class that implements the Item interface. Creates new
+// Planner type for the tour and price
+
 package DesignPatterns.AnnualRetreat.Entertainment;
 
 import DesignPatterns.AnnualRetreat.Item;

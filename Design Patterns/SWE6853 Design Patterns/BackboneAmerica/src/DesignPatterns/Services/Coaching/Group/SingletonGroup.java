@@ -1,3 +1,4 @@
+// Creates Singleton Class for Group Coaching
 package DesignPatterns.Services.Coaching.Group;
 
 import java.text.ParseException;
@@ -10,11 +11,14 @@ import java.util.Scanner;
 public class SingletonGroup {
     Scanner input = new Scanner(System.in);
 
+    // creates an object of SingletonGroup
     private static SingletonGroup instance = new SingletonGroup();
 
+    // constructor to prevent instantiation
     private SingletonGroup() {
     }
 
+    // gets the object
     public static SingletonGroup getInstance() {
         return instance;
     }
@@ -22,20 +26,17 @@ public class SingletonGroup {
     public boolean groupRegistration(String item) {
         String answer;
         String pattern = "MMMM dd, yyyy";
-        int futureWeek = 1;
 
         SimpleDateFormat sdf = new SimpleDateFormat(pattern, new Locale("en", "US"));
-        if (item.equals("4")) {
-            futureWeek = 1;
-        } else if (item.equals("5")) {
-            futureWeek = 2;
-        }
-        String registrationDate = sdf.format(getMonthWeek(futureWeek));
+
+        // gets next date and formats it.
+        String registrationDate = sdf.format(getMonthWeek());
 
 
         System.out.println("The next group session for Your Roadmap to Success is scheduled for " + registrationDate +
                 " at 8:00 am");
 
+        // Verifies users still wants to attend next date. If not, sends back to main menu
         do {
             System.out.println("Are you still interested in attending? (Y/N)");
             answer = input.nextLine();
@@ -49,20 +50,22 @@ public class SingletonGroup {
         return false;
     }
 
-    public static Date getMonthWeek(int nextSat) {
+    // gets next group coaching session... first Saturday of month.
+    public static Date getMonthWeek() {
         Calendar cal = Calendar.getInstance();
         cal.add(Calendar.MONTH, 1);
-        cal.set(Calendar.DAY_OF_MONTH, nextSat);
+        cal.set(Calendar.DAY_OF_MONTH, 1);
         cal.get((Calendar.DAY_OF_WEEK) - 1);
         int i = 1;
         while (cal.get(Calendar.DAY_OF_WEEK) != Calendar.SATURDAY) {
             cal.set(Calendar.DAY_OF_MONTH, i++);
         }
-        Date firstMonday = cal.getTime();
-        String dtStr = new SimpleDateFormat("yyyy-MM-dd").format(firstMonday);
+        Date firstSaturday = cal.getTime();
+        String dtStr = new SimpleDateFormat("yyyy-MM-dd").format(firstSaturday);
         String d = dtStr + " 20:00:00";
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date date = null;
+
         try {
             date = sdf.parse(d);
         } catch (ParseException e) {

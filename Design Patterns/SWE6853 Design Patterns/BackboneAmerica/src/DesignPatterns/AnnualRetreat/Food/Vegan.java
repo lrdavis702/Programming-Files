@@ -1,9 +1,12 @@
+// Concrete class that extends LunchItem (overwrites values
+//in variables)
+
 package DesignPatterns.AnnualRetreat.Food;
 
 public class Vegan extends LunchItem {
     @Override
     public int price() {
-        return 0;
+        return 5;
     }
 
     @Override

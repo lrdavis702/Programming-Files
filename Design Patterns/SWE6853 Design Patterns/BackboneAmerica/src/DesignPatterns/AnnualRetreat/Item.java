@@ -1,6 +1,5 @@
+//This interface includes the variables for items in retreat package
 package DesignPatterns.AnnualRetreat;
-
-import java.util.ArrayList;
 
  public interface Item {
      String name();
@@ -8,5 +7,4 @@ import java.util.ArrayList;
      Planner planner();
      int price();
      int sessions();
-     // ArrayList addons = new ArrayList();
  }

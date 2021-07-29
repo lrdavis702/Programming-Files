@@ -1,6 +1,4 @@
-/*
-
- */
+// Concrete class for Clients, extends UserPrototype
 package DesignPatterns.UserRecord;
 
 public class Client extends UserPrototype {

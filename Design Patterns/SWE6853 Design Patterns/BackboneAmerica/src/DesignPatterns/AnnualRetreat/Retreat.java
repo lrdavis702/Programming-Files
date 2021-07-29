@@ -1,29 +1,33 @@
+// Retreat class with Item objects
 package DesignPatterns.AnnualRetreat;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Retreat {
-    private List<Item> items = new ArrayList<>();
+    private List<Item> options = new ArrayList<Item>();
 
-    public void addItem(Item item) {
+    // adds items to array
+    public void addItem(Item option) {
+        options.add(option);
     }
 
+    // gets total cost of options
     public int getCost() {
         int cost = 0;
 
-        for (Item item : items) {
-            cost += item.price();
-        }
+        for (Item option : options) cost += option.price();
 
         return cost;
     }
 
+    // displays items selected in retreat with price
     public void showItems(){
-        for (Item item : items) {
-            System.out.println("Item : " + item.name());
-            System.out.println(", Planner : " + item.planner().plan());
-            System.out.println(", Price: " + item.price());
+        System.out.println("***Itemized Retreat Package***");
+        System.out.println("------------------------------");
+
+        for (Item option : options) {
+            System.out.println("Option: " + option.name() + " -- $" + option.price());
         }
     }
 }

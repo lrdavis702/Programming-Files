@@ -1,3 +1,4 @@
+// concrete class to get concrete classes (Client/Prospect)
 package DesignPatterns.UserRecord;
 
 import java.util.HashMap;
