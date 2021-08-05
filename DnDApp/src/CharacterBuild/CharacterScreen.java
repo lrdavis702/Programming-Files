@@ -1,5 +1,7 @@
 package CharacterBuild;
 
+import CampaignBuild.CampaignScreen;
+import CharacterBuild.Step1Race.RaceTraits;
 import CharacterBuild.Step1Race.Step1Race;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -12,11 +14,56 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
+import sample.ConfigurePage;
+import sample.LaunchScreen;
+
+import java.util.ArrayList;
 
 public abstract class CharacterScreen extends Application {
-    public static void showScreen(Stage primaryStage, double sw, double sh) {
+    public static void showScreen(Stage primaryStage) throws Exception {
+        ArrayList<String> buttonsArray = new ArrayList<>();
+        buttonsArray.add("Create a New Character");
+        buttonsArray.add("Auto Generate Character");
+        buttonsArray.add("Load Character");
+        buttonsArray.add("Modify Character");
+        buttonsArray.add("Delete Character");
+        buttonsArray.add("Return to Main Menu");
+
+        Button[] buttons;
+
+        String backgroundImage = "file:Images/CharacterBuildImage.jpg";
+        String titleImage = "file:Images/CharactersTitle.png";
+        String screenTitle = "Character Builder";
+
+        buttons = ConfigurePage.configureScreen(primaryStage, buttonsArray, backgroundImage, titleImage, screenTitle);
+
+        buttons[0].setOnAction(actionEvent -> Step1Race.showScreen(primaryStage));
+        buttons[1].setOnAction(actionEvent -> AutoCharacter.showScreen(primaryStage));
+        buttons[2].setOnAction(actionEvent -> LoadCharacter.showScreen(primaryStage));
+        buttons[3].setOnAction(actionEvent -> ModCharacter.showScreen(primaryStage));
+        buttons[4].setOnAction(actionEvent -> {
+            try {
+                DelCharacter.showScreen(primaryStage);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        buttons[5].setOnAction(actionEvent -> {
+            try {
+                LaunchScreen.showScreen(primaryStage);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+    }
+}
+
+    /*public static void showScreen(Stage primaryStage) {
         double buttonSize = 200;
         double gridPadding = 50;
+        double sw = 315;
+        double sh = 812;
 
         // button configurations
         Button bNewCharacter = new Button("Create a New Character");
@@ -65,33 +112,19 @@ public abstract class CharacterScreen extends Application {
             }
         });
 
-        bAutoCharacter.setOnAction(new EventHandler<>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                AutoCharacter.showScreen(primaryStage, sw, sh);
+        bAutoCharacter.setOnAction(actionEvent -> AutoCharacter.showScreen(primaryStage, sw, sh));
+
+        bModCharacter.setOnAction(actionEvent -> ModCharacter.showScreen(primaryStage, sw, sh));
+
+        bDelCharacter.setOnAction(actionEvent -> {
+            try {
+                DelCharacter.showScreen(primaryStage);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         });
 
-        bModCharacter.setOnAction(new EventHandler<>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                ModCharacter.showScreen(primaryStage, sw, sh);
-            }
-        });
-
-        bDelCharacter.setOnAction(new EventHandler<>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                DelCharacter.showScreen(primaryStage, sw, sh);
-            }
-        });
-
-        bReturnMainScreen.setOnAction(new EventHandler<>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                System.out.println("This doesn't return to the main menu");
-            }
-        });
+        bReturnMainScreen.setOnAction(actionEvent -> System.out.println("This doesn't return to the main menu"));
 
         gPane.add(bNewCharacter, 0, 0);
         gPane.add(bAutoCharacter, 0, 1);
@@ -106,3 +139,4 @@ public abstract class CharacterScreen extends Application {
 
     }
 }
+*/
