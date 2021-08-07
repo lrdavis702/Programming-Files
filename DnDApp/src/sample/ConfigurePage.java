@@ -1,3 +1,5 @@
+// #description Called by other classes to create a standard page for the app. Creates a borderpane and includes
+// the title, an image at the top of the screen, buttons for the bottom borderpane, and a background image.
 package sample;
 
 import javafx.application.Application;
@@ -16,15 +18,16 @@ public abstract class ConfigurePage extends Application {
 
     public static Button[] configureScreen(Stage primaryStage, ArrayList<String> buttonsArray, String backgroundImage,
                                            String titleImage, String screenTitle) throws Exception {
-        double screenWidth = 375;
-        double screenHeight = 812;
-        double padding = 25;
-        double bottomPadding = 50;
-        double buttonSize = 100;
+        PageDimensions dimensions = new PageDimensions();
+        double buttonSize = dimensions.getButtonSize();
+        double screenHeight = dimensions.getScreenHeight();
+        double screenWidth = dimensions.getScreenWidth();
+        double padding = dimensions.getPadding();
+        double bottomPadding = dimensions.getBottomPadding();
 
         Button[] buttons = new Button[buttonsArray.size()];
 
-// buttons for display
+        // buttons for display
         for (int i = 0; i < buttonsArray.size(); i++) {
             buttons[i] = new Button(buttonsArray.get(i));
             buttons[i].setMinWidth(buttonSize);
